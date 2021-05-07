@@ -2,7 +2,7 @@ import os
 import requests
 
 
-def post_image(image_url: str):
+def post_image(image_url: str): # TODO ADD HEX etc.
     access_token = os.environ["ACCESS_TOKEN"]
     instagram_business_user_id = os.environ["USER_ID"]
 
@@ -11,7 +11,7 @@ def post_image(image_url: str):
     querystring = {
         "access_token": access_token,
         "image_url": image_url,
-        "caption": "Does this #color #inspire you to create something? #colour"
+        "caption": "Does this #color #inspire you to create something? #colour #colourinspiration"
     }
 
     headers = {"Authorization": "Basic Og=="}

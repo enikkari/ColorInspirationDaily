@@ -3,3 +3,4 @@ schedule
 django
 flask
 matplotlib
+boto3
