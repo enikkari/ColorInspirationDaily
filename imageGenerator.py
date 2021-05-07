@@ -14,9 +14,12 @@ Formats: JPEG
 """
 
 
-def make_random_color_block(img_name="new-img.jpg", bucket=""):
+def make_random_color_block(bucket):
     s3 = boto3.client('s3')
-    img = Image.new('RGB', (32, 32), (randint(0, 256), randint(0, 256), randint(0, 256)))
+
+    rgb = (randint(0, 256), randint(0, 256), randint(0, 256))
+    img = Image.new('RGB', (3, 3), rgb)
+    img_name = f"{rgb[0]}{rgb[1]}{rgb[2]}"
     # img.save(f"{img_name}.jpg")
 
     in_mem_file = io.BytesIO()
@@ -32,4 +35,4 @@ def make_random_color_block(img_name="new-img.jpg", bucket=""):
     )
 
     # todo: return img address & hex etc.
-    return f"https://{bucket}.s3-eu-west-1.amazonaws.com/{img_name}"
+    return f"https://{bucket}.s3-eu-west-1.amazonaws.com/{img_name}", rgb
