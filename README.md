@@ -1,5 +1,7 @@
 Work in progress
 
+Results visible on Instagram [colourinspirationdaily](https://instagram.com/colourinspirationdaily)
+
 [Instagram graph api documentation](https://developers.facebook.com/docs/graph-api)
 
 Posting things to Instagram

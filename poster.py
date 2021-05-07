@@ -14,6 +14,6 @@ if __name__ == '__main__':
     hex = "#{:02x}{:02x}{:02x}".format(rgb[0], rgb[1], rgb[2])
     # TODO cmyk HSC HSL
     post_image(img_url,
-               color_info_string=f"\n\nrgb({rgb[0]}, {rgb[1]}, {rgb[2]})\nhex {hex}\n\n")
+               color_info_string=f"rgb({rgb[0]}, {rgb[1]}, {rgb[2]})\nhex {hex}\n")
 
     # post_mov("todo.mov")
