@@ -11,7 +11,7 @@ def post_image(image_url: str):
     querystring = {
         "access_token": access_token,
         "image_url": image_url,
-        "caption": "#imageofday"
+        "caption": "Does this #color #inspire you to create something? #colour"
     }
 
     headers = {"Authorization": "Basic Og=="}
@@ -45,7 +45,7 @@ def post_mov(image_url: str):
         "media_type": "VIDEO",
         "access_token": access_token,
         "video_url": image_url,
-        "caption": "#imageofday"
+        "caption": "#videoofday"
     }
 
     headers = {"Authorization": "Basic Og=="}
